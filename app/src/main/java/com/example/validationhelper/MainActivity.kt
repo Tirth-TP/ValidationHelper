@@ -16,10 +16,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.button.setOnClickListener {
-            emptyValidationHelper(binding.etUsername)
-            passwordValidationHelper(binding.etPassword)
-            phoneValidationHelper(binding.etPhone)
-            emailValidationHelper(binding.etEmail)
+            binding.etUsername.emptyValidationHelper()
+            binding.etPassword.passwordValidationHelper()
+            binding.etPhone.phoneValidationHelper()
+            binding.etEmail.emailValidationHelper()
         }
 
 

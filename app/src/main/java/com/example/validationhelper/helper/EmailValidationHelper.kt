@@ -6,16 +6,16 @@ import android.widget.EditText
  * Created by Tirth Patel.
  */
 
-fun emailValidationHelper(editText: EditText) {
-    val email = editText.text.toString()
+fun EditText.emailValidationHelper() {
+    val email = this.text.toString()
     val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
     if (email.isNotEmpty()) {
         if (email.matches(emailPattern.toRegex())) {
             return
         } else {
-            editText.error = "Enter valid email"
+            this.error = "Enter valid email"
         }
     } else {
-        editText.error = "This field is required"
+        this.error = "This field is required"
     }
 }

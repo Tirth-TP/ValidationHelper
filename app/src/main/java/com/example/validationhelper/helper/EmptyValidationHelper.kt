@@ -6,9 +6,9 @@ import android.widget.EditText
  * Created by Tirth Patel.
  */
 
-fun emptyValidationHelper(editText: EditText){
-    val msg: String = editText.text.toString()
+fun EditText.emptyValidationHelper(){
+    val msg: String = this.text.toString()
     if(msg.trim().isEmpty()){
-        editText.error = "This field is required"
+        this.error = "This field is required"
     }
 }
